@@ -1,3 +1,8 @@
+// Mediciones (2026-10-20), 28 pruebas en este archivo, 0 fallan sin defecto:
+// - fechaEnChile con instante.toISOString().slice(0, 10) (el error de usar
+//   la fecha UTC): caen 4 de 28.
+// - Ley 19.668 sin trasladar el jueves al lunes (dow <= 3 en vez de <= 4):
+//   cae 1 de 28 (San Pedro y Colón de 2023).
 import { describe, expect, it } from "vitest";
 import fc from "fast-check";
 import {
