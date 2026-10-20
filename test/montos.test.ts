@@ -1,3 +1,9 @@
+// Mediciones (2026-10-20), 66 pruebas en este archivo, 0 fallan sin defecto:
+// - Puntos leídos como decimal (quitar el replace que borra los puntos de
+//   miles en aDecimalCanonico, el error de Number("1.500") === 1.5):
+//   caen 21 de 66.
+// - Sin la regla de la coma con tres decimales (condición en false):
+//   caen 2 de 66 ("1,500" y "999,999" dejan de ser null).
 import { describe, expect, it } from "vitest";
 import fc from "fast-check";
 import { formatearMonto, parsearMonto } from "../src/montos.js";
