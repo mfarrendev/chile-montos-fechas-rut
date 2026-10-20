@@ -1,0 +1,46 @@
+{
+  "name": "utilidades-chile",
+  "version": "0.1.0",
+  "description": "Montos en formato chileno, fechas y días hábiles en America/Santiago, y RUT. Sin dependencias.",
+  "license": "MIT",
+  "author": "Max Farren",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./montos": {
+      "types": "./dist/montos.d.ts",
+      "import": "./dist/montos.js"
+    },
+    "./fechas": {
+      "types": "./dist/fechas.d.ts",
+      "import": "./dist/fechas.js"
+    },
+    "./rut": {
+      "types": "./dist/rut.d.ts",
+      "import": "./dist/rut.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "fast-check": "^4.10.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
+  }
+}
