@@ -1,5 +1,5 @@
 {
-  "name": "utilidades-chile",
+  "name": "chile-montos-fechas-rut",
   "version": "0.1.0",
   "description": "Montos en formato chileno, fechas y días hábiles en America/Santiago, y RUT. Sin dependencias.",
   "license": "MIT",

@@ -13,7 +13,7 @@ describe("punto de entrada", () => {
   it.runIf(existsSync("dist/index.js"))("el build se importa por el nombre del paquete", () => {
     const salida = execFileSync(
       process.execPath,
-      ["--input-type=module", "-e", 'import { formatearRut } from "utilidades-chile"; import { parsearMonto } from "utilidades-chile/montos"; console.log(formatearRut("123456785"), parsearMonto("1.500"))'],
+      ["--input-type=module", "-e", 'import { formatearRut } from "chile-montos-fechas-rut"; import { parsearMonto } from "chile-montos-fechas-rut/montos"; console.log(formatearRut("123456785"), parsearMonto("1.500"))'],
       { encoding: "utf8" },
     );
     expect(salida.trim()).toBe("12.345.678-5 1500");

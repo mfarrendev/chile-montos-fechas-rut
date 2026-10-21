@@ -1,4 +1,4 @@
-# utilidades-chile
+# chile-montos-fechas-rut
 
 Funciones pequeñas, en TypeScript y sin dependencias, para tres cosas que el
 software hecho en Chile suele resolver mal: montos escritos a mano, fechas en
@@ -31,16 +31,16 @@ lugar y con la misma regla de rechazar lo dudoso.
 Requiere Node 24 o superior. Es un paquete ESM.
 
 ```sh
-npm install utilidades-chile
+npm install chile-montos-fechas-rut
 ```
 
 (El paquete no está publicado en npm todavía; mientras tanto se puede
 instalar desde el repositorio.)
 
 ```ts
-import { parsearMonto, hoyChile, formatearRut } from "utilidades-chile";
+import { parsearMonto, hoyChile, formatearRut } from "chile-montos-fechas-rut";
 // o por módulo
-import { parsearMonto } from "utilidades-chile/montos";
+import { parsearMonto } from "chile-montos-fechas-rut/montos";
 ```
 
 ## Montos
