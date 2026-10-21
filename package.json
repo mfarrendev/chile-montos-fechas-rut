@@ -35,12 +35,33 @@
   "scripts": {
     "test": "vitest run",
     "typecheck": "tsc --noEmit -p tsconfig.json",
-    "build": "rm -rf dist && tsc -p tsconfig.build.json"
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build && npm test"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
     "fast-check": "^4.10.2",
     "typescript": "^5.9.3",
     "vitest": "^4.1.12"
+  },
+  "keywords": [
+    "chile",
+    "rut",
+    "feriados",
+    "dias-habiles",
+    "montos",
+    "clp",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfarrendev/chile-montos-fechas-rut.git"
+  },
+  "homepage": "https://github.com/mfarrendev/chile-montos-fechas-rut#readme",
+  "bugs": {
+    "url": "https://github.com/mfarrendev/chile-montos-fechas-rut/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
